@@ -1,5 +1,5 @@
 #!/usr/bn/env bash
-#print infinity and beyond multiple times
+#to infinity and beyond
 
 while true;do
 	echo "To infinity and beyond"
