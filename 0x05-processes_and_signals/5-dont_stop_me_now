@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#dont stop me now
+
+pgrep -f 4-to_inifity_and_beyond | xargs kill
