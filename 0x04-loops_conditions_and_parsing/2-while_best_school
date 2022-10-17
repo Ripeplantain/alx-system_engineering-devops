@@ -3,8 +3,8 @@
 
 number=0
 
-while [ $count -lt 10 ]
+while [ "$number" -lt 10 ]
 do
 	echo "Best School"
-	(( count++ ))
+	(( number++ ))
 done
