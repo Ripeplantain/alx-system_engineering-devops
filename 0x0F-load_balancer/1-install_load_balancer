@@ -5,7 +5,6 @@ sudo apt-get install --no-install-recommends software-properties-common
 sudo add-apt-repository ppa:vbernat/haproxy-2.5
 sudo apt-get install haproxy=2.5.\*
 proxy_config =\
-
 "timeout client  50000
         timeout server  50000
         errorfile 400 /etc/haproxy/errors/400.http
@@ -73,5 +72,5 @@ backend server_group
     server 60751-web-01 35.168.2.85 check
     server 60751-web-02 54.209.170.61 check
 "
-echo "$proxy_config" > /etc/haproxy/haproxy.conf
+sudo echo "$proxy_config" > /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
