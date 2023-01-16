@@ -7,10 +7,11 @@ import sys
 
 if __name__ == "__main__":
     employeeID = sys.argv[1]
-    baseUrl = "https://jsonplaceholder.typicode.com/todos"
+    baseUrl = "https://jsonplaceholder.typicode.com/users"
     url = baseUrl + "/" + employeeID
 
     response = requests.get(url)
+    
     employee_name = response.json().get('name')
 
     todoUrl = url + "/todos"
@@ -19,8 +20,9 @@ if __name__ == "__main__":
     done = 0
     done_tasks = []
 
+
     for task in tasks:
-        if tasks.get('completed'):
+        if task.get('completed'):
             done_tasks.append(task)
             done += 1
 
